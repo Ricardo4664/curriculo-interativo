@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo Interativo | Ricardo</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Organograma de Carreira</h1>
+
+    <div class="tree">
+        <ul>
+            <li>
+                <div class="caixa home-btn" onclick="toggleSub('menuPrincipal')">RICARDO</div>
+
+                <ul id="menuPrincipal" class="subnivel">
+                    
+                    <li>
+                        <div class="caixa" onclick="toggleCard('cardSobre')">👤 Sobre Mim</div>
+                        <div id="cardSobre" class="info-card">
+                            <strong>Perfil Profissional:</strong><br>
+                            Engenheiro Mecânico, Engenheiro de Produção Mecânica, Advogado e Corretor de Imóveis.
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="caixa" onclick="toggleSub('listaExp')">💼 Experiência</div>
+                        <ul id="listaExp" class="subnivel">
+                            <li>
+                                <div class="caixa" onclick="toggleCard('cardExp1')">Consultoria</div>
+                                <div id="cardExp1" class="info-card">
+                                    <em>2017 - Atual</em><br>
+                                    Atuação em consultoria técnica e estratégica.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="caixa" onclick="toggleCard('cardExp2')">Advocacia</div>
+                                <div id="cardExp2" class="info-card">
+                                    <em>2016 - 2026</em><br>
+                                    Escritório de advocacia especializado.
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="caixa" onclick="toggleSub('listaEdu')">🎓 Formação</div>
+                        <ul id="listaEdu" class="subnivel">
+                            <li>
+                                <div class="caixa" onclick="toggleCard('cardEdu1')">Graduação</div>
+                                <div id="cardEdu1" class="info-card">
+                                    <strong>Universidades:</strong><br>
+                                    Engenharias, Direito e ADS.
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="caixa" onclick="toggleCard('cardContato')">📞 Contato</div>
+                        <div id="cardContato" class="info-card">
+                            📧 ricardo@exemplo.com<br>
+                            📱 (19) 99XXX-XXXX<br>
+                            📍 Indaiatuba, SP
+                        </div>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

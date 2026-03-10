@@ -1,0 +1,119 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --bg: #f8f9fa;
+    --line: #bdc3c7;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+h1 { 
+    text-align: center; 
+    color: var(--primary); 
+    margin-bottom: 50px; 
+}
+
+/* Estrutura da Árvore */
+.tree ul {
+    padding-top: 20px; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.tree li {
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 10px 0 10px;
+    transition: all 0.4s;
+}
+
+/* Conectores Lineares */
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    right: 50%;
+    border-top: 2px solid var(--line);
+    width: 50%; 
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto; 
+    left: 50%;
+    border-left: 2px solid var(--line);
+}
+
+.tree li:only-child::after, .tree li:only-child::before { display: none; }
+.tree li:only-child { padding-top: 0; }
+.tree li:first-child::before, .tree li:last-child::after { border: 0 none; }
+.tree li:last-child::before { border-right: 2px solid var(--line); border-radius: 0 5px 0 0; }
+.tree li:first-child::after { border-radius: 5px 0 0 0; }
+
+.tree ul ul::before {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    left: 50%;
+    border-left: 2px solid var(--line);
+    width: 0; 
+    height: 20px;
+}
+
+/* Estilo dos Botões/Caixas */
+.caixa {
+    border: 2px solid var(--primary);
+    padding: 12px 20px;
+    background: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s;
+    min-width: 140px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.caixa:hover {
+    background: var(--secondary);
+    color: white;
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* Conteúdo de Texto (Cards) */
+.info-card {
+    margin-top: 10px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: normal;
+    line-height: 1.4;
+    max-width: 250px;
+    text-align: left;
+    color: #666;
+    display: none; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Lógica de exibição */
+.subnivel { display: none; }
+.mostrar { display: flex !important; flex-direction: row; }
+.mostrar-card { display: block !important; }
+
+/* Destaque para a Home */
+.home-btn {
+    background: var(--primary);
+    color: white;
+    font-size: 1.2em;
+}
