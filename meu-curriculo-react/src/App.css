@@ -7,54 +7,35 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center; /* ISSO centraliza seu currículo */
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #2d3436;
-}
-
-/* Adicione isso para garantir que a "caixa" do React não trave o layout */
-#root {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.App {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    margin: 0;
     padding: 40px 20px;
+    color: #2d3436;
 }
 
 h1 { 
     text-align: center; 
-    color: #1a2a6c; /* Cor de exemplo, ajuste se necessário */
+    color: var(--primary); 
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 60px;
 }
 
 /* Estrutura da Árvore */
-.tree {
-    display: flex;
-    justify-content: center; /* Centraliza a árvore inteira */
-    width: 100%;
-    margin: 0 auto;
-}
-
 .tree ul {
     padding-top: 20px; 
     position: relative;
-    transition: all 0.5s;
-    display: flex; /* Garante que os itens fiquem alinhados corretamente */
+    display: flex;
     justify-content: center;
+}
+
+.tree li {
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
 }
 
 /* Conectores */
